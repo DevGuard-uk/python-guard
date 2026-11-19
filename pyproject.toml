@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "devguard-python-guard"
+version = "1.0.0"
+description = "DevGuard zero-dependency anti-theft, domain authorization, and milestone autolock guard for FastAPI, Django, and Flask."
+readme = "README.md"
+authors = [
+    { name = "DevGuard Security Team", email = "security@devguard.uk" }
+]
+license = { text = "MIT" }
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Framework :: FastAPI",
+    "Framework :: Django",
+    "Framework :: Flask",
+    "Topic :: Security",
+    "Topic :: Internet :: WWW/HTTP :: WSGI :: Middleware",
+]
+keywords = ["devguard", "security", "anti-theft", "middleware", "fastapi", "django", "flask", "asgi", "wsgi"]
+requires-python = ">=3.7"
+dependencies = []
+
+[project.urls]
+Homepage = "https://devguard.uk"
+Documentation = "https://devguard.uk/docs"
+Repository = "https://github.com/DevGuard-uk/devguard-python-guard"
