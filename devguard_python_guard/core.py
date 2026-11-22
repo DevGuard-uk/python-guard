@@ -24,6 +24,7 @@ class DevGuardConfig:
         project_id: Optional[str] = None,
         api_url: Optional[str] = None,
         api_key: Optional[str] = None,
+        sdk_key: Optional[str] = None,
         allowed_domains: Optional[Union[List[str], str]] = None,
         allowed_paths: Optional[List[str]] = None,
         fail_safe: Optional[bool] = None,
@@ -34,7 +35,13 @@ class DevGuardConfig:
     ):
         self.project_id = str(project_id or os.getenv("DEVGUARD_PROJECT_ID", "")).strip()
         self.api_url = (api_url or os.getenv("DEVGUARD_API_URL", "https://api.devguard.uk")).rstrip("/")
-        self.api_key = api_key or os.getenv("DEVGUARD_API_KEY", None)
+        # Prefer project sdk_key / DEVGUARD_SDK_KEY over legacy api_key / DEVGUARD_API_KEY
+        self.api_key = (
+            sdk_key
+            or api_key
+            or os.getenv("DEVGUARD_SDK_KEY", None)
+            or os.getenv("DEVGUARD_API_KEY", None)
+        )
 
         raw_domains = allowed_domains if allowed_domains is not None else os.getenv("DEVGUARD_ALLOWED_DOMAINS")
         if isinstance(raw_domains, str):

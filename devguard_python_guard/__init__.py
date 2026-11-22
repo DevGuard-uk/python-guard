@@ -13,7 +13,7 @@ from .core import (
 from .asgi import DevGuardASGIMiddleware
 from .wsgi import DevGuardWSGIMiddleware
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 __all__ = [
     "DevGuard",

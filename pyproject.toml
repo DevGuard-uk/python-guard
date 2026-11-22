@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "devguard-python-guard"
-version = "1.0.0"
+version = "1.0.1"
 description = "DevGuard zero-dependency anti-theft, domain authorization, and milestone autolock guard for FastAPI, Django, and Flask."
 readme = "README.md"
 authors = [

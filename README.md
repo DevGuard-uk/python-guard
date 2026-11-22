@@ -96,7 +96,8 @@ You can configure DevGuard via environment variables or explicitly in code:
 |---|---|---|
 | `DEVGUARD_PROJECT_ID` | Project ID from DevGuard dashboard | `""` |
 | `DEVGUARD_API_URL` | DevGuard API endpoint | `https://api.devguard.uk` |
-| `DEVGUARD_API_KEY` | DevGuard API key (optional) | `None` |
+| `DEVGUARD_SDK_KEY` | Preferred project SDK key (Portal → Project SDK key) | `None` |
+| `DEVGUARD_API_KEY` | Legacy API / Master Secret fallback when SDK key unset | `None` |
 | `DEVGUARD_ALLOWED_DOMAINS` | Comma-separated allowed domains | `None` |
 | `DEVGUARD_FAIL_SAFE` | `open` (true) or `closed` (false) | `open` |
 | `DEVGUARD_CACHE_TTL` | Cache duration in seconds | `300` |
